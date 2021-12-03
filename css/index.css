@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&family=Ubuntu:ital@1&display=swap');
+* {
+    font-family: 'Lobster', cursive;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*background-color: #000;*/
+}
+
+
+/*Mi inicio */
+
+.header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    background-color: black;
+    position: fixed;
+    font-size: 25px;
+    top: 0;
+}
+
+.headerLogo {
+    width: 15%;
+}
+
+.header a {
+    display: block;
+    height: 100%;
+}
+
+.header img {
+    height: 100%;
+}
+
+.nav {
+    width: 85%;
+    display: flex;
+    align-items: center;
+}
+
+.navUl {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.navUl .active {
+    color: white
+}
+
+.navUl a {
+    text-decoration: none;
+    color: #C2BEBE;
+}
+
+.gridContainer {
+    margin-top: 80px;
+    background: #444;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(auto-fill, 500px);
+}
+
+
+/*Inicio de mi aside*/
+
+.gridAside {
+    grid-row: 1 / 2;
+    background: url('https://i.ibb.co/sjpbzwH/fondo.jpg');
+    background-size: cover;
+    background-position: right;
+    background-position-y: bottom;
+}
+
+.gridMain {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #830A0A;
+}
+
+.textItem {
+    color: white;
+    margin: 20px 30px;
+    font-size: 40px;
+    font-weight: 600;
+    background: transparent;
+}
+
+.textItem:last-child {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: justify;
+}
+
+.gridMap {
+    grid-column: 1/3;
+}
+
+.gridMap iframe {
+    width: 100%;
+    height: 500px;
+}
+
+.gridFooter {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    grid-column: 1/3;
+    height: 80px;
+    font-size: 20px;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.footerUl {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.footerUl a {
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 800px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        height: 150px;
+    }
+    .headerLogo {
+        background-color: #fff;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header a {
+        height: 56px;
+    }
+    .header img {
+        height: 100%;
+    }
+    .gridContainer {
+        margin-top: 20px;
+    }
+    .nav {
+        height: 100%;
+    }
+    .navUl {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 50%);
+        text-align: center;
+        font-size: 15px;
+        height: 100%;
+    }
+    .navUl li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .navUl a {
+        margin: 5px 0;
+        height: 20px;
+    }
+    .gridAside {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        max-height: 500px;
+    }
+    .gridMain {
+        grid-row: 2/3;
+        grid-column: 1/3;
+        height: 300px;
+    }
+    .textItem {
+        font-size: 25px;
+    }
+    .textItem:last-child {
+        font-size: 18px;
+    }
+    .gridMap iframe {
+        max-height: 300px;
+    }
+    .gridFooter {
+        height: 60px;
+    }
+    .footer {
+        font-size: 15px;
+    }
+}
+
+
+/*Productos*/
+
+.gridContainerProductos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(auto-fill, 1100px);
+}
+
+.gridContainerMain {
+    display: grid;
+    grid-column: 2/6;
+    justify-content: center;
+    justify-items: center;
+    background-color: #830A0A;
+    padding: 40px;
+}
+
+.tituloProductos {
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.ulProductos {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.ulProductos img {
+    width: 100%;
+    border-radius: 25%;
+}
+
+.gridContainerFooter {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    grid-column: 1/7;
+    height: 80px;
+    font-size: 20px;
+}
+
+.footerProductos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.footerUlProductos {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.footerUlProductos a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/*Movile de Productos*/
+
+@media (max-width:800px) {
+    .gridContainerProductos {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(auto-fill, 100%);
+        margin-top: 150px;
+    }
+    .gridContainerMain {
+        display: grid;
+        grid-column: 2/6;
+        justify-content: center;
+        justify-items: center;
+        background-color: #830A0A;
+        padding: 0 20px;
+    }
+    .tituloProductos {
+        font-size: 30px;
+        font-weight: 500;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        padding: 40px 0;
+    }
+    .ulProductos {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+    .ulProductos img {
+        width: 100%;
+    }
+    .gridContainerFooter {
+        grid-column: 1/7;
+        height: 50px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 550px) {
+    .gridContainerProductos {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(auto-fill, 100%);
+        margin-top: 150px;
+    }
+    .gridContainerMain {
+        display: grid;
+        grid-column: 2/6;
+        justify-content: center;
+        justify-items: center;
+        background-color: #830A0A;
+        padding: 30px 30px;
+        height: 100%;
+    }
+    .ulProductos {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+    .ulProductos img {
+        width: 100%;
+    }
+    .gridContainerFooter {
+        grid-column: 1/7;
+        height: 50px;
+        font-size: 15px;
+    }
+}
